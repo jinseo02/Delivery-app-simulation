@@ -9,32 +9,32 @@ class Order:
 
 # 1. 사용자 주문 요청.
 def 사용자_주문요청():
-    print("[사용자] 메뉴를 선택합니다.")
+    print("[1단계] [사용자] 메뉴를 선택합니다.")
     return Order("홍길동", "불고기 피자", 15000)
 
 # 2. 앱 >>> 서버로 주문 전송.
 def 앱_주문전송(order):
-    print(f"[앱] 서버에 주문 전송: {order.menu} (₩{order.price})")
+    print(f"[2단계] [앱] 서버에 주문 전송: {order.menu} (₩{order.price})")
 
 # 3. 서버 >>> 결제 시스템.
 def 서버_결제요청(order):
-    print(f"[서버] {order.user_name}님의 '{order.menu}' 결제 요청")
-    print("[결제 시스템] 결제 완료")
+    print(f"[3단계] [서버] {order.user_name}님의 '{order.menu}' 결제 요청")
+    print("[3단계] [결제 시스템] 결제 완료")
     return True
 
 # 4. 서버 >>> 식당.
 def 서버_식당전달(order):
-    print(f"[서버] 식당에 '{order.menu}' 주문 전달")
-    print("[식당] 주문 수락 및 조리 시작")
+    print(f"[4단계] [서버] 식당에 '{order.menu}' 주문 전달")
+    print("[4단계] [식당] 주문 수락 및 조리 시작")
 
 # 5. 서버 >>> 라이더 시스템.
 def 서버_라이더요청():
-    print("[서버] 라이더 호출 요청")
-    print("[라이더 시스템] 배달 기사 배정 완료")
+    print("[5단계] [서버] 라이더 호출 요청")
+    print("[5단계] [라이더 시스템] 배달 기사 배정 완료")
 
 # 6. 앱 >>> 사용자.
 def 앱_알림(order):
-    print(f"[앱] {order.user_name}님, 주문이 완료되었습니다. 배달이 곧 시작됩니다.")
+    print(f"[6단계] [앱] {order.user_name}님, 주문이 완료되었습니다. 배달이 곧 시작됩니다.")
 
 # 전체 흐름 실행.
 def main():
